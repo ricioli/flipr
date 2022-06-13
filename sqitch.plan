@@ -3,3 +3,5 @@
 
 appschema 2022-06-13T21:13:57Z alex <alex@alex.teste> # Add schema for all flipr objects.
 users [appschema] 2022-06-13T21:43:01Z alex <alex@alex.teste> # Creates table to track our users.
+insert_user [users appschema] 2022-06-13T23:09:47Z alex <alex@alex.teste> # Creates a function to insert a user.
+change_pass [users appschema] 2022-06-13T23:10:02Z alex <alex@alex.teste> # Creates a function to change a user password.
