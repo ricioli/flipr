@@ -4,13 +4,15 @@
 
 BEGIN;
 
-CREATE OR REPLACE FUNCTION flipr.change_pass(
+SET search_path TO :"schema";
+
+CREATE OR REPLACE FUNCTION change_pass(
     nick    TEXT,
     oldpass TEXT,
     newpass TEXT
 ) RETURNS BOOLEAN LANGUAGE plpgsql SECURITY DEFINER AS $$
 BEGIN
-    UPDATE flipr.users
+    UPDATE users
        SET password = md5($3)
      WHERE nickname = $1
        AND password = md5($2);

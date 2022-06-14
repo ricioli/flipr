@@ -3,7 +3,9 @@
 
 BEGIN;
 
-CREATE TABLE flipr.users (
+SET search_path TO :"schema";
+
+CREATE TABLE users (
     nickname  TEXT        PRIMARY KEY,
     password  TEXT        NOT NULL,
     timestamp TIMESTAMPTZ NOT NULL DEFAULT NOW()

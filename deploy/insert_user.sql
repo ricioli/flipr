@@ -4,11 +4,13 @@
 
 BEGIN;
 
-CREATE OR REPLACE FUNCTION flipr.insert_user(
+SET search_path TO :"schema";
+
+CREATE OR REPLACE FUNCTION insert_user(
     nickname TEXT,
     password TEXT
 ) RETURNS VOID LANGUAGE SQL SECURITY DEFINER AS $$
-    INSERT INTO flipr.users VALUES($1, md5($2));
+    INSERT INTO users VALUES($1, md5($2));
 $$;
 
 COMMIT;
