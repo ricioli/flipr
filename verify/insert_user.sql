@@ -2,6 +2,8 @@
 
 BEGIN;
 
-SELECT has_function_privilege('flipr.insert_user(text, text)', 'execute');
+SET search_path TO :"schema";
+
+SELECT has_function_privilege('insert_user(text, text)', 'execute');
 
 ROLLBACK;

@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP SCHEMA flipr;
+DROP SCHEMA IF EXISTS :"schema";
 
 COMMIT;

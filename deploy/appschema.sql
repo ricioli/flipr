@@ -2,8 +2,6 @@
 
 BEGIN;
 
-SET search_path TO :"schema";
-
--- CREATE SCHEMA IF NOT EXISTS flipr;
+CREATE SCHEMA IF NOT EXISTS :"schema";
 
 COMMIT;

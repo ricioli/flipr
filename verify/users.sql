@@ -2,8 +2,10 @@
 
 BEGIN;
 
+SET search_path TO :"schema";
+
 SELECT nickname, password, timestamp
-  FROM flipr.users
+  FROM users
  WHERE FALSE;
 
 ROLLBACK;

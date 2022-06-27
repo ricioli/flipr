@@ -2,6 +2,8 @@
 
 BEGIN;
 
-DROP TABLE flipr.users;
+SET search_path TO :"schema";
+
+DROP TABLE users;
 
 COMMIT;

@@ -2,6 +2,8 @@
 
 BEGIN;
 
-DROP FUNCTION flipr.insert_user(TEXT, TEXT);
+SET search_path TO :"schema";
+
+DROP FUNCTION insert_user(TEXT, TEXT);
 
 COMMIT;
